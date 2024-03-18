@@ -1,0 +1,4 @@
+.scrollbar {
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+    scrollbar-color: #a30000 transparent;/* Color del "pulgar" y fondo */
+  }

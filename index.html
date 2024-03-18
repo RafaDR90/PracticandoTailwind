@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              secondary: '#000223',
+              hover_secondary: '#202244'
+            }
+          }
+        }
+      }
+    </script>
+    <title>Tailwind</title>
+</head>
+<body class="flex m-0 p-0 overflow-x-hidden min-h-screen">
+    
+    
+    <!-- Nav expandible lateral -->
+    <nav id="nav-expandable" class=" overflow-y-auto scrollbar text-white bg-secondary w-screen absolute h-screen z-10 transition-all duration-300 left-[-100%] md:absolute md:w-96 border-r shadow-lg">
+      <!-- Botones parte superior -->
+      <div class="flex justify-between w-full">
+        <div>
+          <div class="h-8 m-2">
+            <img class="h-full" src="./public/img/logo-phoenix.png" alt="Logo">
+          </div>
+        </div>
+        <div class="flex">
+          <div class="h-6 m-2">
+            <img class="h-full" src="./public/img/notification.png" alt="Logo notificacion">
+          </div>
+          <div class="h-6 m-2">
+            <img class="h-full" src="./public/img/user.png" alt="Icono usuario">
+          </div>
+          <button id="close__nav-expandable--button" class="h-6 m-2 md:hidden">
+            <img class="h-full" src="./public/img/baclWhite.png" alt="Boton atras">
+          </button>
+        </div>
+      </div>
+
+      <!-- Info usuario -->
+      <div class="flex flex-col items-center justify-center mt-10 ">
+        <div class="h-32 w-32">
+          <img class="h-full w-full rounded-full object-cover" src="./public/img/senora2.png" alt="Foto perfil">
+        </div>
+        <p class="font-bold text-white mt-5">Maria Navarro</p>
+        <p class="text-gray-300">Maria-navarro@gmail.com</p>
+      </div>
+      <!-- dashboard container -->
+      <div class="mt-10 flex flex-col gap-1 items-center">
+        <div class="w-11/12 ml-3">
+          <h3 class="font-bold text-red-700">TABLERO DE CONTROL</h3>
+          <p class="text-gray-300 text-sm">Diseños únicos de tableros de control</p>
+        </div>
+        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/project.png" alt="Icono projecto">
+          </div>
+          <p class="text-xl">Projecto</p>
+        </button>
+        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/analisis.png" alt="Icono analisis">
+          </div>
+          <p class="text-xl">Analisis</p>
+        </button>
+        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/finanzas.png" alt="Icono finanzas">
+          </div>
+          <p class="text-xl">Finanzas</p>
+        </button>
+        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Crypto</p>
+        </button>
+      </div>
+
+      <!-- Applications container -->
+      <div class="mt-10 flex flex-col gap-1 items-center">
+        <div class="w-11/12 ml-3">
+          <h3 class="font-bold text-red-700">APPLICACIONES</h3>
+          <p class="text-gray-300 text-sm">Diseños de aplicaciones personalizados</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Pagina principal -->
+    <main class=" w-full mr-20 transform transition-all duration-300">
+
+      <!-- Nav top -->
+        <nav class="border-b border-gray-500 flex justify-end items-center h-16">
+
+          <!-- Nav Container -->
+          <div id="normal-nav-container" class="flex gap-5 w-full items-center">
+
+          <!-- Boton expande nav lateral -->
+            <div class="mt-2 ml-2 mr-auto mb-2">
+                <button id="expandButton" class="relative group">
+                  <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-white ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+                    <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                      <div class="bg-slate-700 h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:translate-x-10"></div>
+                      <div class="bg-slate-700 h-[2px] w-7 rounded transform transition-all duration-300 group-focus:translate-x-10 delay-75"></div>
+                      <div class="bg-slate-700 h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:translate-x-10 delay-150"></div>
+          
+                      <div class="absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 group-focus:translate-x-0 flex w-0 group-focus:w-12">
+                        <div class="absolute bg-slate-700 h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300 group-focus:rotate-45"></div>
+                        <div class="absolute bg-slate-700 h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300 group-focus:-rotate-45"></div>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+
+                <!-- DropDown idioma-->
+                <div>
+                  <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="font-medium  text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">
+                    <div class="flex gap-2 items-center">
+                      <div class="w-6">
+                        <img class="w-full" src="./public/img/bandera.png" alt="bandera del idioma">
+                      </div>
+                      <p>Idioma</p>
+                    </div>
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdown" class="z-10 absolute hidden bg-white divide-y rounded-lg shadow w-[content] ">
+                      <ul class="py-2 text-sm text-black " aria-labelledby="dropdownDefaultButton">
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                            <div class="flex gap-2 items-center">
+                              <div class="w-6">
+                                <img class="w-full" src="./public/img/bandera.png" alt="bandera del idioma">
+                              </div>
+                              <p>Espa&ntilde;ol</p>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                            <div class="flex gap-2 items-center">
+                              <div class="w-6">
+                                <img class="w-full" src="./public/img/estados-unidos.png" alt="bandera del idioma">
+                              </div>
+                              <p>English</p>
+                            </div>
+                          </a>
+                      </ul>
+                  </div>
+                </div>
+
+              
+                <!-- Boton para alternar entre pantalla completa -->
+                <button title="Pantalla completa." class="w-5">
+                  <img class="w-full" src="./public/img/tamano-completo.png" alt="icono de tamaño completo">
+                </button>
+
+                <!-- Boton Buscar -->
+                <button id="open-search" onclick="switchSearch()" class="w-5">
+                  <img class="w-full" src="./public/img/lupa.png" alt="Icono de lupa">
+                </button>
+
+                <!-- Boton mensajes -->
+                <div class="mr-20">
+                  <button id="bandeja-entrada_button" class="w-5">
+                    <img class="w-full" src="./public/img/bandeja-de-entrada.png" alt="Icono mensajes">
+                  </button>
+                  <!-- Desplegable mensajes -->
+                  <div id="dropdown-mensajes" class="z-10  absolute hidden bg-white right-0 divide-y rounded-lg shadow w-[content] ">
+                    <div class="flex bg-purple-800 rounded-t-lg text-white w-[26rem] h-[4rem] items-center justify-around">
+                      <h2 class="text-2xl">Mensajes</h2>
+                      <div class="w-6">
+                        <img class="w-full" src="./public/img/mensaje-blanco.png" alt="icono mensaje">
+                      </div>
+                    </div>
+                    <div class="max-h-80 overflow-auto">
+                      <div class="flex gap-4 py-4 px-2 border-b border-gray-300">
+                        <div class="w-8">
+                          <img class="rounded-full w-full" src="./public/img/senora.jpeg" alt="Foto de perfil">
+                        </div>
+                        <div>
+                          <h3 class="font-bold">Gary Peters</h3>
+                          <p>Deveriamos hablar del almuerzo</p>
+                          <p class="text-sm text-gray-600">Mar 13, 3:00 PM</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-4 py-4 px-2 border-b border-gray-300">
+                        <div class="w-8">
+                          <img class="rounded-full w-full" src="./public/img/senora.jpeg" alt="Foto de perfil">
+                        </div>
+                        <div>
+                          <h3 class="font-bold">Gary Peters</h3>
+                          <p>Deveriamos hablar del almuerzo</p>
+                          <p class="text-sm text-gray-600">Mar 13, 3:00 PM</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-4 py-4 px-2 border-b border-gray-300">
+                        <div class="w-8">
+                          <img class="rounded-full w-full" src="./public/img/senora.jpeg" alt="Foto de perfil">
+                        </div>
+                        <div>
+                          <h3 class="font-bold">Gary Peters</h3>
+                          <p>Deveriamos hablar del almuerzo</p>
+                          <p class="text-sm text-gray-600">Mar 13, 3:00 PM</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-4 py-4 px-2 border-b border-gray-300">
+                        <div class="w-8">
+                          <img class="rounded-full w-full" src="./public/img/senora.jpeg" alt="Foto de perfil">
+                        </div>
+                        <div>
+                          <h3 class="font-bold">Gary Peters</h3>
+                          <p>Deveriamos hablar del almuerzo</p>
+                          <p class="text-sm text-gray-600">Mar 13, 3:00 PM</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-4 py-4 px-2 border-b border-gray-300">
+                        <div class="w-8">
+                          <img class="rounded-full w-full" src="./public/img/senora.jpeg" alt="Foto de perfil">
+                        </div>
+                        <div>
+                          <h3 class="font-bold">Gary Peters</h3>
+                          <p>Deveriamos hablar del almuerzo</p>
+                          <p class="text-sm text-gray-600">Mar 13, 3:00 PM</p>
+                        </div>
+                      </div>
+                      <div class="flex gap-4 py-4 px-2 border-b border-gray-300">
+                        <div class="w-8">
+                          <img class="rounded-full w-full" src="./public/img/senora.jpeg" alt="Foto de perfil">
+                        </div>
+                        <div>
+                          <h3 class="font-bold">Gary Peters</h3>
+                          <p>Deveriamos hablar del almuerzo</p>
+                          <p class="text-sm text-gray-600">Mar 13, 3:00 PM</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <!-- Fin desplegable -->
+
+
+
+              </div>
+              
+              <!-- Buscar Container -->
+              <div id="buscar-container" class="flex gap-3 h-full w-[100%] items-center justify-center hidden">
+                <div class="h-6">
+                  <img class="h-full" src="./public/img/lupa.png" alt="Icono lupa">
+                </div>
+                <input type="text" class="h-[70%] w-[90%] text-lg focus:outline-none" placeholder="Buscar...">
+                <div class="w-8">
+                  <img id="close-search" onclick="switchSearch()" class="w-full cursor-pointer" src="./public/img/cerrar-simbolo-de-boton-circular.png" alt="Icono boton de cerrar">
+                </div>
+              </div>
+        </nav>
+        
+        <h1 class="md:bg-yellow-400 lg:bg-green-400">asdlñasd aslñdañslñasldasfd fg dfg dfg  dfsg  dfsg  dfs g df gd fg dfsg   dfsg  dfs g df gd fg dfsg  dfs g df gd fg dfsg  dfs g df gd fg dfsg  dfs g df gd fgdfs g df gd fg dfsg  dfs g df gd fg fdsg fds gddfg  dfsg  dfsg  dfs g df gd fg fdsg fds gddfg  dfsg  dfsg  dfs g df gd fg fdsg fds gddfg  dfsg  dfsg  dfs g df gd fg fdsg fds gdf gdf sgd g dfg</h1>
+    </main>
+
+    <!-- Seccion de chats -->
+    <section id="chat__section" class="bg-white border-l border-gray-400 absolute w-80 h-full right-[-16.6rem] flex flex-col transform transition-all duration-300">
+      <button id="boton__section--derecha" class="h-10 flex gap-4 pl-1 h-16 border-b border-gray-500 items-center">
+        <img class="h-3/4" src="./public/img/mensaje-glovo.png" alt="Icono chat">
+        <p>Chat de equipo</p>
+      </button>
+      <div class="flex h-[calc(100vh - 4rem)]" ><!--style="height: calc(100% - 4rem);"-->
+        <div class="border-r border-gray-400 h-full max-h-full gap-3 w-16 flex flex-col items-center overflow-y-auto">
+          <div class="h-10 transition-transform hover:scale-110">
+            <img class="h-full rounded-full" src="./public/img/senora2.png" alt="Foto perfil señora">
+          </div>
+          <div class="h-10 transition-transform hover:scale-110">
+            <img class="h-full rounded-full" src="./public/img/senora2.png" alt="Foto perfil señora">
+          </div>
+          <div class="h-10 transition-transform hover:scale-110">
+            <img class="h-full rounded-full" src="./public/img/senora2.png" alt="Foto perfil señora">
+          </div>
+          <div class="h-10 transition-transform hover:scale-110">
+            <img class="h-full rounded-full" src="./public/img/senora2.png" alt="Foto perfil señora">
+          </div>
+          <div class="h-10 transition-transform hover:scale-110">
+            <img class="h-full rounded-full" src="./public/img/senora2.png" alt="Foto perfil señora">
+          </div>
+          <div class="h-10 transition-transform hover:scale-110">
+            <img class="h-full rounded-full" src="./public/img/senora2.png" alt="Foto perfil señora">
+          </div>
+        </div>
+        <div class="bg-slate-100 w-full flex flex-col justify-center items-center">
+          <div class="h-20">
+            <img class="h-full" src="./public/img/mensaje-glovo.png" alt="Icono chat">
+          </div>
+          <p>Selecciona una converzacion</p>
+        </div>
+      </div>
+      
+      
+
+    </section>
+    
+    <script>
+      /* BLOQUE NAV EXPANDIBLE */
+        document.getElementById('expandButton').addEventListener('click', alternarNav)
+        document.getElementById('close__nav-expandable--button').addEventListener('click', alternarNav)
+        
+        function alternarNav() {
+          const navExpandable = document.getElementById('nav-expandable');
+          
+          // Obtener el estilo actual del elemento
+          const computedStyle = window.getComputedStyle(navExpandable);
+          
+          // Obtener el valor actual de la propiedad 'left'
+          const leftValue = computedStyle.getPropertyValue('left');
+          
+          // Alterna el valor de 'left'
+          navExpandable.style.left = leftValue === '0px' ? '-100%' : '0';
+          
+          navExpandable.classList.toggle('md:absolute');
+          navExpandable.classList.toggle('md:relative')
+        }
+        /* FIN BLOQUE NAV EXPANDIBLE */
+        
+
+        /* BLOQUE DROPDOWN IDIOMA */
+        const dropdownButton = document.getElementById('dropdownDefaultButton');
+        const dropdownMenu = document.getElementById('dropdown');
+
+        // Agregamos un evento de clic al botón
+        dropdownButton.addEventListener('click', function() {
+          dropdownMenu.classList.toggle('hidden');
+        });
+        /* FIN BLOQUE DROPDOWN */
+
+        /* BLOQUE NAV SEARCH */
+        const topNav = document.getElementById('normal-nav-container')
+        const topNavSearch = document.getElementById('buscar-container')
+        function switchSearch(){
+          console.log('funciona')
+          topNav.classList.toggle('hidden');
+          topNavSearch.classList.toggle('hidden');
+        }
+        /* FIN BLOQUE NAV SEARCH */
+
+        /* BLOQUE BANDEJA MENSAJES */
+        const bandejaContainer=document.getElementById('dropdown-mensajes')
+        document.getElementById('bandeja-entrada_button').addEventListener('click', ()=>{
+          bandejaContainer.classList.toggle('hidden')
+        })
+        /* FIN BANDEJA MENSAJES */
+
+        /* BLOQUE CHAT EXPANDIBLE */
+        
+        const chatSection = document.getElementById('chat__section')
+        const botonExpandeChat = document.getElementById('boton__section--derecha').addEventListener('click',()=>{
+          chatSection.classList.toggle('right-0');
+          chatSection.classList.toggle('right-[-16.6rem]');
+        })
+
+
+        /* https://angular-material.fusetheme.com/dashboards/project */
+    </script>
+    
+</body>
+</html>
