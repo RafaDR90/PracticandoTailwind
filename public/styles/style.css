@@ -1,4 +1,21 @@
-.scrollbar {
-    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
-    scrollbar-color: #a30000 transparent;/* Color del "pulgar" y fondo */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  
+}
+
+@layer components{
+  .button-nav-izq{
+    @apply w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary;
   }
+}
+
+@layer utilities{
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #a30000 transparent;
+  }
+}

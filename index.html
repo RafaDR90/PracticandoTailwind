@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/styles/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./public/styles/styletw.css">
     <script>
       tailwind.config = {
         theme: {
@@ -58,25 +57,25 @@
           <h3 class="font-bold text-red-700">TABLERO DE CONTROL</h3>
           <p class="text-gray-300 text-sm">Diseños únicos de tableros de control</p>
         </div>
-        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+        <button class="button-nav-izq">
           <div class="h-8 ml-3">
             <img class="h-full" src="./public/img/project.png" alt="Icono projecto">
           </div>
           <p class="text-xl">Projecto</p>
         </button>
-        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+        <button class="button-nav-izq">
           <div class="h-8 ml-3">
             <img class="h-full" src="./public/img/analisis.png" alt="Icono analisis">
           </div>
           <p class="text-xl">Analisis</p>
         </button>
-        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+        <button class="button-nav-izq">
           <div class="h-8 ml-3">
             <img class="h-full" src="./public/img/finanzas.png" alt="Icono finanzas">
           </div>
           <p class="text-xl">Finanzas</p>
         </button>
-        <button class="w-11/12 text-white flex items-center gap-3 pt-4 pb-4 rounded-lg hover:border-b hover:border-gray-300 hover:bg-hover_secondary focus:border-b focus:border-gray-300 focus:bg-hover_secondary">
+        <button class="button-nav-izq">
           <div class="h-8 ml-3">
             <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
           </div>
@@ -85,11 +84,143 @@
       </div>
 
       <!-- Applications container -->
-      <div class="mt-10 flex flex-col gap-1 items-center">
+      <div class="mt-10 flex flex-col gap-1 items-center mb-2">
         <div class="w-11/12 ml-3">
           <h3 class="font-bold text-red-700">APPLICACIONES</h3>
           <p class="text-gray-300 text-sm">Diseños de aplicaciones personalizados</p>
         </div>
+        <button class="button-nav-izq">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Academia</p>
+        </button>
+        <button class="button-nav-izq">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Chat</p>
+        </button>
+        <button class="button-nav-izq">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Contactos</p>
+        </button>
+        <div class="relative w-full" data-twe-dropdown-position="dropend">
+          <button id="dropdownMenuButton1e" class="button-nav-izq ml-auto mr-auto desplegable">
+            <div class="h-8 ml-3">
+              <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+            </div>
+            <div class="flex w-9/12 justify-between">
+              <p class="text-xl">EComercio</p>
+              <span class="text-gray-500 text-2xl font-bold">></span>
+            </div>
+          </button>
+          <ul
+            class="flex-col  z-[1000] m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none  bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+            aria-labelledby="dropdownMenuButton1e"
+            data-twe-dropdown-menu-ref>
+            <li>
+              <a
+                class="ml-14 text-xl w-11/12 block whitespace-nowrap  px-4 py-2 text-white  focus:outline-none  active:no-underline hover:underline"
+                href="#"
+                data-twe-dropdown-item-ref
+                >Inventario</a
+              >
+            </li>
+            
+          </ul>
+        </div>
+
+        <button class="button-nav-izq">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Gestor de archivos</p>
+        </button>
+        
+        <div class="relative w-full">
+          <button id="dropdownMenuButton1e" class="button-nav-izq ml-auto mr-auto desplegable">
+            <div class="h-8 ml-3">
+              <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+            </div>
+            <div class="flex w-9/12 justify-between">
+              <p class="text-xl">Centro de ayuda</p>
+              <span class="text-gray-500 text-2xl font-bold">></span>
+            </div>
+          </button>
+          <ul
+            class="flex-col  z-[1000] m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none  bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+            aria-labelledby="dropdownMenuButton2"
+            data-twe-dropdown-menu-ref>
+            <li>
+              <a
+                class="ml-14 text-xl w-11/12 block whitespace-nowrap  px-4 py-2 text-white  focus:outline-none  active:no-underline hover:underline"
+                href="#"
+                data-twe-dropdown-item-ref
+                >Principal</a
+              >
+            </li>
+            <li>
+              <a
+                class="ml-14 text-xl w-11/12 block whitespace-nowrap  px-4 py-2 text-white  focus:outline-none  active:no-underline hover:underline"
+                href="#"
+                data-twe-dropdown-item-ref
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                class="ml-14 text-xl w-11/12 block whitespace-nowrap  px-4 py-2 text-white  focus:outline-none  active:no-underline hover:underline"
+                href="#"
+                data-twe-dropdown-item-ref
+                >Guias</a
+              >
+            </li>
+            <li>
+              <a
+                class="ml-14 text-xl w-11/12 block whitespace-nowrap  px-4 py-2 text-white  focus:outline-none  active:no-underline hover:underline"
+                href="#"
+                data-twe-dropdown-item-ref
+                >Soporte</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <button class="button-nav-izq ml-auto mr-auto">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <div class="flex w-9/12 justify-between">
+            <p class="text-xl">Buzon de correo</p>
+            <span class=" w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-white text-base font-bold">12</span>
+
+          </div>
+        </button>
+
+        <button class="button-nav-izq">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Notas</p>
+        </button>
+
+        <button class="button-nav-izq">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Tablero Scrum</p>
+        </button>
+
+        <button class="button-nav-izq">
+          <div class="h-8 ml-3">
+            <img class="h-full" src="./public/img/crypto.png" alt="Icono crypto">
+          </div>
+          <p class="text-xl">Tareas</p>
+        </button>
+        
       </div>
     </nav>
 
@@ -175,7 +306,7 @@
                   </button>
                   <!-- Desplegable mensajes -->
                   <div id="dropdown-mensajes" class="z-10  absolute hidden bg-white right-0 divide-y rounded-lg shadow w-[content] ">
-                    <div class="flex bg-purple-800 rounded-t-lg text-white w-[26rem] h-[4rem] items-center justify-around">
+                    <div class="flex bg-red-600 rounded-t-lg text-white w-[26rem] h-[4rem] items-center justify-around">
                       <h2 class="text-2xl">Mensajes</h2>
                       <div class="w-6">
                         <img class="w-full" src="./public/img/mensaje-blanco.png" alt="icono mensaje">
@@ -263,16 +394,41 @@
               </div>
         </nav>
         
-        <h1 class="md:bg-yellow-400 lg:bg-green-400">asdlñasd aslñdañslñasldasfd fg dfg dfg  dfsg  dfsg  dfs g df gd fg dfsg   dfsg  dfs g df gd fg dfsg  dfs g df gd fg dfsg  dfs g df gd fg dfsg  dfs g df gd fgdfs g df gd fg dfsg  dfs g df gd fg fdsg fds gddfg  dfsg  dfsg  dfs g df gd fg fdsg fds gddfg  dfsg  dfsg  dfs g df gd fg fdsg fds gddfg  dfsg  dfsg  dfs g df gd fg fdsg fds gdf gdf sgd g dfg</h1>
+        <!-- Contenido principal -->
+        <section class="h-full w-full">
+          <!-- Informacion usuario -->
+          <div class="flex flex-col md:flex-row md:justify-around gap-2 items mt-5">
+            <div class="flex">
+              <div class="h-20 w-20 ">
+                <img class="h-full w-20 rounded-full object-cover" src="./public/img/senora2.png" alt="Banner">
+              </div>
+              <div class="h-20 flex flex-col justify-center">
+                <h2 class="text-xl md:text-2xl">¡Bienvenid@ de nuevo, Señora!</h2>
+                <div class="flex">
+                  <div class="h-6">
+                    <img src="./public/img/campana.png" alt="Icono campana" class="h-full">
+                  </div>
+                  <p>Tienes <span>12</span> mensajes nuevos</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="flex justify-center items-center h-full gap-3">
+                <button class="rounded-full bg-gray-800 text-white px-4 py-2">Mensajes</button>
+              <button class="rounded-full bg-red-600 text-white px-4 py-2">Configuracion</button>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
 
     <!-- Seccion de chats -->
     <section id="chat__section" class="bg-white border-l border-gray-400 absolute w-80 h-full right-[-16.6rem] flex flex-col transform transition-all duration-300">
-      <button id="boton__section--derecha" class="h-10 flex gap-4 pl-1 h-16 border-b border-gray-500 items-center">
+      <button id="boton__section--derecha" class=" flex gap-4 pl-1 h-16 border-b border-gray-500 items-center">
         <img class="h-3/4" src="./public/img/mensaje-glovo.png" alt="Icono chat">
         <p>Chat de equipo</p>
       </button>
-      <div class="flex h-[calc(100vh - 4rem)]" ><!--style="height: calc(100% - 4rem);"-->
+      <div class="flex h-[calc(100vh - 4rem)] h-full" ><!--style="height: calc(100% - 4rem);"-->
         <div class="border-r border-gray-400 h-full max-h-full gap-3 w-16 flex flex-col items-center overflow-y-auto">
           <div class="h-10 transition-transform hover:scale-110">
             <img class="h-full rounded-full" src="./public/img/senora2.png" alt="Foto perfil señora">
@@ -362,9 +518,38 @@
           chatSection.classList.toggle('right-0');
           chatSection.classList.toggle('right-[-16.6rem]');
         })
+        /* FIN BLOQUE CHAT EXPANDIBLE */
 
+        /* BLOQUE DROPDOWN MENU IZQUIERDA*/
+        // Obtener todos los botones con la clase "button-nav-izq"
+var dropdownButtons = document.querySelectorAll('.desplegable');
 
-        /* https://angular-material.fusetheme.com/dashboards/project */
+// Agregar evento de clic a cada botón
+dropdownButtons.forEach(function(dropdownButton) {
+  dropdownButton.addEventListener("click", function (event) {
+    // Obtener el menú desplegable asociado a este botón
+    var dropdownMenu = dropdownButton.nextElementSibling;
+
+    // Alternar la clase 'hidden' para mostrar u ocultar el menú desplegable
+    dropdownMenu.classList.toggle("hidden");
+  });
+});
+
+// Agregar un evento de clic en cualquier lugar fuera de los menús desplegables para cerrarlos
+document.addEventListener("click", function (event) {
+  dropdownButtons.forEach(function(dropdownButton) {
+    // Verificar si el elemento clickeado no es un botón desplegable
+    if (!dropdownButton.contains(event.target)) {
+      // Ocultar el menú desplegable asociado al botón
+      var dropdownMenu = dropdownButton.nextElementSibling;
+      dropdownMenu.classList.add("hidden");
+    }
+  });
+});
+
+        /* FIN BLOQUE DROPDOWN MENU IZQUIERDA*/
+
+                /* https://angular-material.fusetheme.com/dashboards/project */
     </script>
     
 </body>
